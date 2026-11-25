@@ -1,0 +1,56 @@
+/* Fundo alternado, como as Habilidades */
+.trilha {
+    background-color: var(--fundo-alt);
+}
+
+.trilha-cards {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.trilha-card {
+    background-color: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.trilha-card h3 {
+    margin: 4px 0 8px;
+    font-size: 1.05rem;
+}
+
+.trilha-card p {
+    color: var(--texto-suave);
+    font-size: 0.95rem;
+}
+
+/* Rótulo pequeno em cima de cada card */
+.trilha-rotulo {
+    font-family: var(--fonte-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--texto-suave);
+}
+
+/* O card "Agora" ganha o laranja de destaque */
+.trilha-rotulo.atual {
+    color: var(--destaque);
+}
+
+
+/* Tablet: 2 colunas. Celular: 1 coluna */
+@media (max-width: 900px){
+    .trilha-cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 560px){
+    .trilha-cards{
+        grid-template-columns: 1fr;
+    }
+}

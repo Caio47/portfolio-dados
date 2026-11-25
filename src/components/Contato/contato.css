@@ -1,0 +1,45 @@
+/* Rodapé escuro */
+.contato {
+    background-color: var(--escuro);
+    color: var(--fundo);
+}
+
+.contato h2 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    line-height: 1.2;
+    margin-bottom: 12px;
+    max-width: 600px;
+}
+
+.contato p {
+    color: #bdbdb8;
+    max-width: 520px;
+}
+
+.contato-botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+/* O .botao padrão é escuro: no fundo escuro ele precisa ser claro */
+.contato .botao {
+    background-color: transparent;
+    color: var(--fundo);
+    border: 1px solid var(--fundo);
+}
+
+/* O primeiro (Gmail) é o botão principal: cheio */
+.contato .botao:first-child {
+    background-color: var(--fundo);
+    color: var(--escuro);
+}
+
+.contato-copy {
+    display: block;
+    margin-top: 48px;
+    font-family: var(--fonte-mono);
+    font-size: 0.8rem;
+    color: #8a8a85;
+}

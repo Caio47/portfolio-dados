@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+  --fundo: #f6f5f1;
+    --fundo-alt: #eeeae3;
+    --escuro: #18191b;
+    --card: #ffffff;
+    --destaque: #b4421a;
+    --destaque-claro: #fbe3d8;
+    --borda: #e2dfd8;
+    --fonte: "Inter", sans-serif;
+    --fonte-mono: "JetBrains Mono", monospace;
+    --texto-suave:#555
+}
+body{
+    font-family: var(--fonte);
+    background-color: var(--fundo) ;
+   color: var(--escuro);
+    line-height: 1.6;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.botao{
+    background-color: var(--escuro);
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    font-weight: 500;
+    color: var(--fundo);
+    transition: 0.2s;
+}
+.botao-sec{
+    background-color: transparent;
+    color: var(--escuro);
+    border: 1px solid var(--escuro);
+}
+.botao:hover{
+    opacity: 0.85;
+
+}
+.rotulo{
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: .25rem;
+    font-family: var(--fonte-mono);
+    color: var(--destaque);
+}
+
+/* Rolagem suave ao clicar no menu; scroll-padding evita o menu fixo cobrir o título */
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
+/* Celular: menos espaço nas seções */
+@media (max-width: 768px){
+    .conteudo{
+        padding: 48px 20px;
+    }
+}

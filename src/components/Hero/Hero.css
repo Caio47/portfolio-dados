@@ -1,0 +1,38 @@
+.hero{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 24px;
+}
+.hero h1{
+    font-size: clamp(2rem,5vw,3.5rem);
+    line-height: 1.1;
+}
+
+.hero-codigo{
+    background-color: var(--escuro);
+    padding:16px ;
+    border-radius:12px ;
+    font-family: var(--fonte-mono);
+    color:var(--fundo);
+    font-size: 0.85rem;
+    overflow-x: auto;
+    box-shadow: 0 12px 32px rgba(0, 0,0,0.15);
+}
+.hero-botoes{
+    display: flex;
+    gap:12px;
+    margin-top: 24px;
+
+}
+
+/* Celular: texto em cima, código embaixo (1 coluna) */
+@media (max-width: 768px){
+    .hero{
+        grid-template-columns: 1fr;
+        padding: 48px 20px;
+    }
+}

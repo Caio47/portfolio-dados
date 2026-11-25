@@ -1,0 +1,112 @@
+/* Card em destaque: texto de um lado, terminal escuro do outro */
+.projeto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 32px;
+    background-color: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    overflow: hidden; /* faz o terminal respeitar os cantos arredondados */
+}
+
+.projeto-texto {
+    padding: 32px;
+}
+
+.projeto-texto h3 {
+    font-size: 1.5rem;
+    margin: 16px 0 8px;
+}
+
+.projeto-texto p {
+    color: #555;
+}
+
+/* Linha de tags: status + tecnologias */
+.projeto-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* Etapas numeradas */
+.projeto-etapas-titulo {
+    display: block;
+    margin: 24px 0 8px;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #555;
+}
+
+.projeto-etapas {
+    list-style: none;
+    counter-reset: etapa;
+    margin-bottom: 24px;
+}
+
+.projeto-etapas li {
+    counter-increment: etapa;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+/* o número dentro do círculo vem do contador do CSS */
+.projeto-etapas li::before {
+    content: counter(etapa);
+    display: grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: var(--escuro);
+    color: var(--fundo);
+    font-size: 0.75rem;
+}
+
+/* Lado escuro: terminal */
+.projeto-terminal {
+    background-color: var(--escuro);
+    color: var(--fundo);
+    font-family: var(--fonte-mono);
+    font-size: 0.85rem;
+    padding: 32px;
+    overflow-x: auto;
+}
+
+/* Cards "próximo projeto" */
+.projetos-proximos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.proximo {
+    border: 1px dashed var(--borda);
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.proximo h3 {
+    margin: 4px 0 8px;
+}
+
+.proximo p {
+    color: #555;
+}
+
+
+/* Celular: texto em cima, terminal embaixo; cards "próximo" empilhados */
+@media (max-width: 768px){
+    .projeto,
+    .projetos-proximos{
+        grid-template-columns: 1fr;
+    }
+    .projeto-texto,
+    .projeto-terminal{
+        padding: 24px;
+    }
+}

@@ -1,0 +1,40 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--borda);
+    background-color:var(--fundo) ;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+nav ul{
+    display: flex;
+    gap: 24px;
+}
+.logo{
+    font-family: var(--fonte-mono);
+    font-weight: 500;
+}
+a{
+  font-size: 0.9rem;
+}
+ nav a:hover{
+    color: var(--destaque);
+}
+
+
+/* Celular: logo em cima, menu embaixo, e os links podem quebrar de linha */
+@media (max-width: 768px){
+    .header{
+        flex-direction: column;
+        gap: 8px;
+        padding: 12px 16px;
+    }
+    nav ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+}
